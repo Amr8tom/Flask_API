@@ -12,7 +12,7 @@ from PIL import Image
 import cv2
 import numpy as np
 print("ya raaaaaaaaab")
-my_model= load_model("D:\DMC Project\github\oral_cancer\model87.h5")
+my_model= load_model("model87.h5")
 #print(tf.__version__)
 app=Flask(__name__)
 def preprossing(image):
