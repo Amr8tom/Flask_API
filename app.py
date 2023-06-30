@@ -68,7 +68,6 @@ def gogo():
     ind= np.argmax(y)
     y=classes[ind]
     return jsonify({'prediction': y})
-#fsdfsdfsdfsd
 # def predict():
 #      print("run cooode")
 #      if request.method=="GET":
@@ -84,15 +83,10 @@ def gogo():
      
 #      return "dsadasdas"
 if __name__=='__main__':
-     app.run(debug=True,port=4000)
+     #app.run(debug=True,port=4000)
+     app.run(host="0.0.0.0",port=5000)
 
 
-
-
-
-# @app.route('/')
-# def index():
-#      return render_template("index.html")
 
 # @app.route('/',methods=['get','post'])
 # def home():
