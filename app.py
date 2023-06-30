@@ -68,7 +68,7 @@ def gogo():
     ind= np.argmax(y)
     y=classes[ind]
     return jsonify({'prediction': y})
-
+#fsdfsdfsdfsd
 # def predict():
 #      print("run cooode")
 #      if request.method=="GET":
