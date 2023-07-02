@@ -15,7 +15,7 @@ def home ():
 
 
 classes = ["non-cancer","cancer"]
-my_model= models.load_model("model87.h5")
+#my_model= models.load_model("model87.h5")
 
 # @app.route('/pred',methods=["POST","GET"])
 # def index():
