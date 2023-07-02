@@ -6,12 +6,13 @@ from flask import Flask , request , render_template ,url_for,jsonify
 # from flask import Flask, request, jsonify
 # from tensorflow import keras
 # from keras import load_model
-import cv2
+# import cv2
 
 app = Flask(__name__)
 
 @app.route('/')
 def index():
+    return "xjhkl;kjhcvvjklkhvcklknbvbm,nb"
     #if request.method=='POST':
     #     image_file = request.files['image']
     #     image_bytes = image_file.read()
@@ -33,7 +34,7 @@ def index():
         # y=classes[ind]
     #     return jsonify({'prediction': "cancer"})
     #  else:
-    return "ya raaaaaaab"
+    # return "ya raaaaaaab"
 
 
 if __name__ == '__main__':
