@@ -2,7 +2,6 @@ from flask import Flask , request , render_template ,url_for,jsonify
 import base64
 from PIL import Image
 import io
-from tensorflow.keras.models import load_model
 from PIL import Image
 import numpy as np
 from flask import Flask, request, jsonify
@@ -17,7 +16,7 @@ app = Flask(__name__)
 @app.route('/',methods=["POST","GET"])
 def index():
      classes = ["non-cancer","cancer"]
-     my_model= load_model("model87.h5")
+     my_model= keras.load_model("model87.h5")
      if request.method=='POST':
         image_file = request.files['image']
         image_bytes = image_file.read()
