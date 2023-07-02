@@ -30,7 +30,7 @@ def index():
         assert input_image.shape == (1, 50, 50, 3)
         # y = my_model.predict([input_image])
         y=[0.4,3.5]
-        y=y.tolist()
+        #y=y.tolist()
         ind= np.argmax(y)
         y=classes[ind]
         return jsonify({'prediction': "cancer"})
