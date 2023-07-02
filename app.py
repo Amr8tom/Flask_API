@@ -2,26 +2,17 @@
 import base64
 from PIL import Image
 import io
-from PIL import Image
 import numpy as np
 from flask import Flask, request, jsonify
 # from tensorflow import keras
 # from keras import load_model
-import numpy as np
-#from PIL import Image
 import cv2
-import numpy as np
 
 app = Flask(__name__)
 
 @app.route('/',methods=["POST","GET"])
 def index():
-     
-        
-        
-    #  classes = ["non-cancer","cancer"]
-    #  my_model= load_model("model87.h5")
-     if request.method=='POST':
+    if request.method=='POST':
     #     image_file = request.files['image']
     #     image_bytes = image_file.read()
     #     image_np = np.frombuffer(image_bytes, np.uint8)
