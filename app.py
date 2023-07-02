@@ -15,11 +15,8 @@ print("ya raaaaaaaaab")
 my_model= load_model("model87.h5")
 #print(tf.__version__)
 app=Flask(__name__)
-def preprossing(image):
-    Image=cv2.resize(image,(50,50))
-    Image=Image.astype("float32")/255.
-    Image=Image.reshape((1, ) +Image.shape)
-    return Image
+
+
 classes = ["non-cancer","cancer"]
 # @app.route('/predict', methods=["POST"])
 # def predict():
