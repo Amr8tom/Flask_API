@@ -14,7 +14,7 @@ def home ():
     return jsonify({'prediction': "ya raaaaaaaab"})
 
 
-classes = ["non-cancer","cancer"]
+#classes = ["non-cancer","cancer"]
 #my_model= models.load_model("model87.h5")
 
 # @app.route('/pred',methods=["POST","GET"])
