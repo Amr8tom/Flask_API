@@ -5,7 +5,8 @@ import io
 from PIL import Image
 import numpy as np
 from flask import Flask, request, jsonify
-from tensorflow import keras
+# from tensorflow import keras
+# from keras import load_model
 import numpy as np
 from PIL import Image
 import cv2
@@ -16,7 +17,7 @@ app = Flask(__name__)
 @app.route('/',methods=["POST","GET"])
 def index():
      classes = ["non-cancer","cancer"]
-     my_model= keras.load_model("model87.h5")
+    #  my_model= load_model("model87.h5")
      if request.method=='POST':
         image_file = request.files['image']
         image_bytes = image_file.read()
@@ -31,7 +32,8 @@ def index():
         normalized_image = resized_image / 255.0
         input_image = np.expand_dims(normalized_image, axis=0)
         assert input_image.shape == (1, 50, 50, 3)
-        y = my_model.predict([input_image])
+        # y = my_model.predict([input_image])
+        y=[0.4,3.5]
         y=y.tolist()
         ind= np.argmax(y)
         y=classes[ind]
