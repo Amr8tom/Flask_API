@@ -29,12 +29,11 @@ def index():
         normalized_image = resized_image / 255.0
         input_image = np.expand_dims(normalized_image, axis=0)
         assert input_image.shape == (1, 50, 50, 3)
-        # y = my_model.predict([input_image])
-        y=[0.4,3.5]
-        #y=y.tolist()
+        y = my_model.predict([input_image])
+        y=y.tolist()
         ind= np.argmax(y)
         y=classes[ind]
-        return jsonify({'prediction': "cancer"})
+        return jsonify({'prediction': y})
     else:
         return jsonify({'prediction': "ya raaaaaaaab"})
 
