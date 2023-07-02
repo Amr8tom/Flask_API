@@ -1,17 +1,17 @@
-# from flask import Flask , request , render_template ,url_for,jsonify,cv2
+from flask import Flask , request , render_template ,url_for,jsonify,cv2
 import base64
-from PIL import Image
+#from PIL import Image
 import io
 from tensorflow.keras.models import load_model
 # from PIL import Image
 # import numpy as np
 from flask import Flask, request, jsonify
-from tensorflow import keras
-import numpy as np
-from PIL import Image
-import cv2
-import numpy as np
-print("ya raaaaaaaaab")
+#from tensorflow import keras
+#import numpy as np
+#from PIL import Image
+#import cv2
+#import numpy as np
+#print("ya raaaaaaaaab")
 #print(tf.__version__)
 app=Flask(__name__)
 
@@ -44,10 +44,9 @@ classes = ["non-cancer","cancer"]
 
 
 
-@app.route('/', methods=["POST","GET"])
+@app.route('/', methods=["POST"])
 def gogo():
     my_model= load_model("model87.h5")
-
     # image_file = request.files['image']
     # image_bytes = image_file.read()
     # image_np = np.frombuffer(image_bytes, np.uint8)
