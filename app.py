@@ -1,13 +1,14 @@
 from flask import Flask, request, jsonify
 from tensorflow import keras
 from keras import models
-
-
-
 import cv2
-
-
 import numpy as np
+
+
+classes = ["non-cancer","cancer"]
+my_model= models.load_model("model87.h5")
+
+
 
 app = Flask(__name__)
 
@@ -15,8 +16,7 @@ app = Flask(__name__)
 # def home ():
 #     return jsonify({'prediction': "ya raaaaaaaab"})
 
-classes = ["non-cancer","cancer"]
-my_model= models.load_model("model87.h5")
+
 
 @app.route('/',methods=["POST","GET"])
 def index():
