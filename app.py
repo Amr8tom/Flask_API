@@ -9,11 +9,12 @@ import cv2
 
 
 app = Flask(__name__)
-classes = ["non-cancer","cancer"]
-my_model= load_model("model87.h5")
+
 
 @app.route('/',methods=["POST"])
 def index():
+    classes = ["non-cancer","cancer"]
+    my_model= load_model("model87.h5")
     image_file = request.files['image']
     image_bytes = image_file.read()
     image_np = np.frombuffer(image_bytes, np.uint8)
