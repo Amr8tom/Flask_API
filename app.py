@@ -1,11 +1,11 @@
-from flask import Flask , request , render_template ,url_for,jsonify,cv2
-import base64
+# from flask import Flask , request , render_template ,url_for,jsonify,cv2
+# import base64
 #from PIL import Image
-import io
-from tensorflow.keras.models import load_model
+#import io
+#from tensorflow.keras.models import load_model
 # from PIL import Image
 # import numpy as np
-from flask import Flask, request, jsonify
+#from flask import Flask, request, jsonify
 #from tensorflow import keras
 #import numpy as np
 #from PIL import Image
@@ -13,10 +13,10 @@ from flask import Flask, request, jsonify
 #import numpy as np
 #print("ya raaaaaaaaab")
 #print(tf.__version__)
-app=Flask(__name__)
+# app=Flask(__name__)
 
 
-classes = ["non-cancer","cancer"]
+#classes = ["non-cancer","cancer"]
 # @app.route('/predict', methods=["POST"])
 # def predict():
 #      #imagefile key in flutter json map
@@ -44,9 +44,9 @@ classes = ["non-cancer","cancer"]
 
 
 
-@app.route('/', methods=["POST"])
-def gogo():
-    my_model= load_model("model87.h5")
+# @app.route('/', methods=["POST"])
+# def gogo():
+    #my_model= load_model("model87.h5")
     # image_file = request.files['image']
     # image_bytes = image_file.read()
     # image_np = np.frombuffer(image_bytes, np.uint8)
@@ -65,7 +65,7 @@ def gogo():
     # ind= np.argmax(y)
     # y=classes[ind]
     # return jsonify({'prediction': y})
-    return "Ya raaaaaaaaaaaaaaaaab"
+    # return "Ya raaaaaaaaaaaaaaaaab"
 
 
 
@@ -83,8 +83,8 @@ def gogo():
 #           print("the model worked well ")
      
 #      return "dsadasdas"
-if __name__=='__main__':
-    app.run(host="0.0.0.0",port=5000)
+# if __name__=='__main__':
+#     app.run(host="0.0.0.0",port=5000)
     #app.run(debug=True)
 
 
@@ -98,3 +98,15 @@ if __name__=='__main__':
 #      return render_template("index.html",imagee=image_url)
 
      
+
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+    return render_template('test.html')
+
+
+if __name__ == '__main__':
+    app.run(host="0.0.0.0", port=5000, debug=True)
