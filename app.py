@@ -1,21 +1,13 @@
 from flask import Flask, request, jsonify
-#from tensorflow import keras
-#from keras import models
-#import cv2
+# from tensorflow import keras
+# from keras import models
 
 
 
-#my_model= models.load_model("model87.h5")
+import cv2
 
-# @app.route('/pred',methods=["POST","GET"])
-# def index():
-#     if request.method=='POST':
-#         image_file = request.files['image']
-#         image_bytes = image_file.read()
-#         image_np = np.frombuffer(image_bytes, np.uint8)
-#         image = cv2.imdecode(image_np, cv2.IMREAD_COLOR)
-#         # Check if the image was loaded 
-#import numpy as np
+
+import numpy as np
 
 app = Flask(__name__)
 
@@ -24,7 +16,17 @@ def home ():
     return jsonify({'prediction': "ya raaaaaaaab"})
 
 
-#classes = ["non-cancer","cancer"]successfully
+classes = ["non-cancer","cancer"]
+# my_model= models.load_model("model87.h5")
+
+# @app.route('/pred',methods=["POST","GET"])
+# def index():
+#     if request.method=='POST':
+#         image_file = request.files['image']
+#         image_bytes = image_file.read()
+#         image_np = np.frombuffer(image_bytes, np.uint8)
+#         image = cv2.imdecode(image_np, cv2.IMREAD_COLOR)
+#         # Check if the image was loaded successfully
 #         if image is None:
 #             return 'Failed to load image', 400
         
@@ -44,4 +46,4 @@ def home ():
 
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=5000)
+    app.run(host="0.0.0.0", port=5000, debug=True)
