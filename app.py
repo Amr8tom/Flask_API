@@ -1,5 +1,5 @@
 #from flask import Flask , request , render_template ,url_for,jsonify
-import cv2
+#import cv2
 # import base64
 #from PIL import Image
 # import io
@@ -13,7 +13,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return "xjhkl;kjhcvvjklkhvcklknbvbm,nb"
+    return jsonify({'prediction': "cancer"})
     #if request.method=='POST':
     #     image_file = request.files['image']
     #     image_bytes = image_file.read()
