@@ -3,7 +3,7 @@
 # import base64
 #from PIL import Image
 # import io
-import numpy as np
+#import numpy as np
 from flask import Flask, request, jsonify
 # from tensorflow import keras
 # from keras import load_model
