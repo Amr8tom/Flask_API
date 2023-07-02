@@ -1,4 +1,4 @@
-from flask import Flask , request , render_template ,url_for,jsonify
+#from flask import Flask , request , render_template ,url_for,jsonify
 import base64
 from PIL import Image
 import io
@@ -8,8 +8,8 @@ from flask import Flask, request, jsonify
 # from tensorflow import keras
 # from keras import load_model
 import numpy as np
-from PIL import Image
-import cv2
+#from PIL import Image
+#import cv2
 import numpy as np
 
 app = Flask(__name__)
