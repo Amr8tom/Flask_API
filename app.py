@@ -9,7 +9,7 @@ from flask import Flask, request, jsonify
 # from keras import load_model
 import numpy as np
 #from PIL import Image
-#import cv2
+import cv2
 import numpy as np
 
 app = Flask(__name__)
