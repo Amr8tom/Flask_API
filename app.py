@@ -14,7 +14,7 @@ app = Flask(__name__)
 def index():
     #if request.method=='POST':
     #     image_file = request.files['image']
-         image_bytes = image_file.read()
+    #     image_bytes = image_file.read()
     #     image_np = np.frombuffer(image_bytes, np.uint8)
     #     image = cv2.imdecode(image_np, cv2.IMREAD_COLOR)
     #     # Check if the image was loaded successfully
