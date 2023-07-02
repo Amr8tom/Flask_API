@@ -10,9 +10,9 @@ import cv2
 
 app = Flask(__name__)
 
-@app.route('/',methods=["POST","GET"])
+@app.route('/')
 def index():
-    if request.method=='POST':
+    #if request.method=='POST':
     #     image_file = request.files['image']
     #     image_bytes = image_file.read()
     #     image_np = np.frombuffer(image_bytes, np.uint8)
@@ -31,9 +31,9 @@ def index():
         #y=y.tolist()
         # ind= np.argmax(y)
         # y=classes[ind]
-        return jsonify({'prediction': "cancer"})
-     else:
-         return "ya raaaaaaab"
+    #     return jsonify({'prediction': "cancer"})
+    #  else:
+    return "ya raaaaaaab"
 
 
 if __name__ == '__main__':
