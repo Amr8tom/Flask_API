@@ -5,16 +5,6 @@ from keras import models
 
 
 
-#import numpy as np
-
-app = Flask(__name__)
-
-@app.route('/')
-def home ():
-    return jsonify({'prediction': "ya raaaaaaaab"})
-
-
-#classes = ["non-cancer","cancer"]
 #my_model= models.load_model("model87.h5")
 
 # @app.route('/pred',methods=["POST","GET"])
@@ -24,7 +14,17 @@ def home ():
 #         image_bytes = image_file.read()
 #         image_np = np.frombuffer(image_bytes, np.uint8)
 #         image = cv2.imdecode(image_np, cv2.IMREAD_COLOR)
-#         # Check if the image was loaded successfully
+#         # Check if the image was loaded 
+#import numpy as np
+
+app = Flask(__name__)
+
+@app.route('/')
+def home ():
+    return jsonify({'prediction': "ya raaaaaaaab"})
+
+
+#classes = ["non-cancer","cancer"]successfully
 #         if image is None:
 #             return 'Failed to load image', 400
         
@@ -44,4 +44,4 @@ def home ():
 
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    app.run(host="0.0.0.0", port=5000)
