@@ -1,12 +1,13 @@
-from flask import Flask , request , render_template ,url_for,jsonify
+#from flask import Flask , request , render_template ,url_for,jsonify
+#import cv2
 # import base64
 #from PIL import Image
 # import io
 # import numpy as np
-# from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify
 # from tensorflow import keras
 # from keras import load_model
-# import cv2
+
 
 app = Flask(__name__)
 
@@ -35,6 +36,7 @@ def index():
     #     return jsonify({'prediction': "cancer"})
     #  else:
     # return "ya raaaaaaab"
+
 
 
 if __name__ == '__main__':
