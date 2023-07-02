@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify
 from tensorflow import keras
 from keras import models
-import cv2
+# import cv2
 
 import numpy as np
 
@@ -12,10 +12,11 @@ def home ():
     return jsonify({'prediction': "ya raaaaaaaab"})
 
 
-# @app.route('/',methods=["POST","GET"])
+classes = ["non-cancer","cancer"]
+my_model= models.load_model("model87.h5")
+
+# @app.route('/pred',methods=["POST","GET"])
 # def index():
-#     classes = ["non-cancer","cancer"]
-#     my_model= models.load_model("model87.h5")
 #     if request.method=='POST':
 #         image_file = request.files['image']
 #         image_bytes = image_file.read()
