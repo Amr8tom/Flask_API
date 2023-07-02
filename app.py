@@ -16,7 +16,7 @@ import numpy as np
 # app=Flask(__name__)
 
 
-classes = ["non-cancer","cancer"]
+
 # @app.route('/predict', methods=["POST"])
 # def predict():
 #      #imagefile key in flutter json map
@@ -101,9 +101,9 @@ app = Flask(__name__)
 
 @app.route('/',methods=["POST","GET"])
 def index():
-     
-     if request.method=='post':
-        my_model= load_model("model87.h5")
+     classes = ["non-cancer","cancer"]
+     my_model= load_model("model87.h5")
+     if request.method=='POST':
         image_file = request.files['image']
         image_bytes = image_file.read()
         image_np = np.frombuffer(image_bytes, np.uint8)
