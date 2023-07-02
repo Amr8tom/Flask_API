@@ -12,7 +12,6 @@ from PIL import Image
 import cv2
 import numpy as np
 print("ya raaaaaaaaab")
-my_model= load_model("model87.h5")
 #print(tf.__version__)
 app=Flask(__name__)
 
@@ -47,6 +46,8 @@ classes = ["non-cancer","cancer"]
 
 @app.route('/', methods=["POST","GET"])
 def gogo():
+    my_model= load_model("model87.h5")
+
     # image_file = request.files['image']
     # image_bytes = image_file.read()
     # image_np = np.frombuffer(image_bytes, np.uint8)
