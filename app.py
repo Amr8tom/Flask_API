@@ -11,14 +11,14 @@ import numpy as np
 
 app = Flask(__name__)
 
-@app.route('/')
-def home ():
-    return jsonify({'prediction': "ya raaaaaaaab"})
+# @app.route('/')
+# def home ():
+#     return jsonify({'prediction': "ya raaaaaaaab"})
 
 classes = ["non-cancer","cancer"]
 my_model= models.load_model("model87.h5")
 
-@app.route('/predict',methods=["POST"])
+@app.route('/',methods=["POST","GET"])
 def index():
     if request.method=='POST':
         image_file = request.files['image']
@@ -45,4 +45,4 @@ def index():
 
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    app.run(port=4000, debug=True)
