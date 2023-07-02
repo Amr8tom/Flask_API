@@ -1,8 +1,8 @@
 from flask import Flask, request, jsonify
-from tensorflow import keras
-from keras import models
-import cv2
-import numpy as np
+# from tensorflow import keras
+# from keras import models
+# import cv2
+# import numpy as np
 app = Flask(__name__)
 
 @app.route('/')
