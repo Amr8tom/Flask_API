@@ -6,13 +6,14 @@ import base64
 import numpy as np
 from flask import Flask, request, jsonify
 from tensorflow import keras
-from keras import load_model
+from keras import models
 
 
 app = Flask(__name__)
 
 @app.route('/',methods=["POST","GET"])
 def index():
+    classes = ["non-cancer","cancer"]
     if request.method=='POST':
         image_file = request.files['image']
         image_bytes = image_file.read()
