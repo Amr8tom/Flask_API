@@ -1,6 +1,6 @@
 #from flask import Flask , request , render_template ,url_for,jsonify
 import cv2
-import base64
+#import base64
 #from PIL import Image
 # import io
 import numpy as np
@@ -14,6 +14,7 @@ app = Flask(__name__)
 @app.route('/',methods=["POST","GET"])
 def index():
     classes = ["non-cancer","cancer"]
+    my_model= models.load_model("model87.h5")
     if request.method=='POST':
         image_file = request.files['image']
         image_bytes = image_file.read()
