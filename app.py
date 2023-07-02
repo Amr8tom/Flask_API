@@ -21,29 +21,29 @@ def preprossing(image):
     Image=Image.reshape((1, ) +Image.shape)
     return Image
 classes = ["non-cancer","cancer"]
-@app.route('/predict', methods=["POST"])
-def predict():
-     #imagefile key in flutter json map
-     if 'imagefile' in request.files:
-        imagefile = request.files['imagefile']
-        # Further processing of the uploaded image
-        # ...
+# @app.route('/predict', methods=["POST"])
+# def predict():
+#      #imagefile key in flutter json map
+#      if 'imagefile' in request.files:
+#         imagefile = request.files['imagefile']
+#         # Further processing of the uploaded image
+#         # ...
 
-        print ("Image file received and processed successfully.")
-     else:
-        return "No image file found in the request." 
-     print("GsdGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG")
-     print(imagefile)
-     print("GsdGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG")
-     #image_path = "D:/opaodp" + imagefile.filename
-     #imagefile.save(image_path)
-     # image_bytes = base64.b64decode(imagefile)
-     # image = Image.open(io.BytesIO(image_bytes))
-     image_bytes = imagefile.read()
-     image  = base64.b64encode(image_bytes).decode('utf-8')
-     image = preprossing(image)
-     y = my_model.predict([image])
-     return jsonify({'prediction': y})
+#         print ("Image file received and processed successfully.")
+#      else:
+#         return "No image file found in the request." 
+#      print("GsdGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG")
+#      print(imagefile)
+#      print("GsdGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG")
+#      #image_path = "D:/opaodp" + imagefile.filename
+#      #imagefile.save(image_path)
+#      # image_bytes = base64.b64decode(imagefile)
+#      # image = Image.open(io.BytesIO(image_bytes))
+#      image_bytes = imagefile.read()
+#      image  = base64.b64encode(image_bytes).decode('utf-8')
+#      image = preprossing(image)
+#      y = my_model.predict([image])
+#      return jsonify({'prediction': y})
 
 
 
