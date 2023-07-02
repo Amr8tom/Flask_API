@@ -1,12 +1,11 @@
 from flask import Flask, request, jsonify
-# from tensorflow import keras
-# from keras import models
-# import cv2
-# import numpy as np
-
+from tensorflow import keras
+from keras import models
+import cv2
+import numpy as np
 app = Flask(__name__)
 
-@app.route('/',methods=["POST","GET"])
+@app.route('/')
 def home ():
     return "a7777777777a"
 
