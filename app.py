@@ -1,4 +1,4 @@
-# from flask import Flask , request , render_template ,url_for,jsonify,cv2
+from flask import Flask , request , render_template ,url_for,jsonify
 import base64
 from PIL import Image
 #import io
@@ -92,14 +92,12 @@ import cv2
 
      
 
-from flask import Flask, render_template
-
 app = Flask(__name__)
+classes = ["non-cancer","cancer"]
+my_model= load_model("model87.h5")
 
-@app.route('/')
+@app.route('/',methods=["POST"])
 def index():
-    classes = ["non-cancer","cancer"]
-    my_model= load_model("model87.h5")
     image_file = request.files['image']
     image_bytes = image_file.read()
     image_np = np.frombuffer(image_bytes, np.uint8)
@@ -118,7 +116,6 @@ def index():
     ind= np.argmax(y)
     y=classes[ind]
     return jsonify({'prediction': y})
-
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=5000, debug=True)
