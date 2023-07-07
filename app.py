@@ -40,7 +40,7 @@ def index():
         y=classes[ind]
         return jsonify({'prediction':y})
     else:
-        return jsonify({'prediction': "ya raaaaaaaab"})
+        return jsonify({'prediction': "upload or use post method to get result"})
 
 
 
