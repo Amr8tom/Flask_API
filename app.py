@@ -18,7 +18,7 @@ app = Flask(__name__)
 #     return jsonify({'prediction': "ya raaaaaaaab"})
 
 
-@app.route('/get_Bcodes', methods=['GET'])
+@app.route('/', methods=['GET'])
 def get_strings():
     # Replace this list with your actual list of strings
     Bcodes = ["6223001364986", "6223001362975", "6223001365785"]
