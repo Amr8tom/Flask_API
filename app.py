@@ -22,7 +22,7 @@ app = Flask(__name__)
 def get_strings():
     # Replace this list with your actual list of strings
     Bcodes = ["6223001364986", "6223001362975", "6223001365785","6225000332928","62211550","622020804848"]
-    Patterns = ["622300671", "622114309", "50112","6221155097"]
+    Patterns = ["622300671", "622114309", "50112","622115509"]
     manufactures=[]
 
 
