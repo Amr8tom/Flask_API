@@ -21,10 +21,9 @@ app = Flask(__name__)
 @app.route('/', methods=['GET'])
 def get_strings():
     # Replace this list with your actual list of strings
-    Bcodes = ["6223001364986", "6223001362975", "6223001365785","6225000332928","62211550","6222020804848"]
+    Bcodes = ["6223001364986", "6223001362975", "6223001365785","6225000332928","62211550","6222020804848","-999"]
     Patterns = ["622300671", "622114309", "50112","62211550997"]
     manufactures=[]
-
 
     return jsonify({
         'Bcodes': Bcodes,
